@@ -1,3 +1,9 @@
+pcmanfm-qt (1.1.0-2ubuntu1) kinetic; urgency=medium
+
+  * 
+
+ -- Aaron Rainbolt <arraybolt3@gmail.com>  Fri, 15 Jul 2022 16:12:33 -0500
+
 pcmanfm-qt (1.1.0-2) experimental; urgency=medium
 
   * Removed redundant "Repository-Browse" field from debian/upstream/metadata.
