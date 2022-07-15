@@ -1,60 +1,28 @@
-pcmanfm-qt (1.1.0-0ubuntu4) kinetic; urgency=medium
+pcmanfm-qt (1.1.0-2) experimental; urgency=medium
 
-  * Backport some upstream patches:
-    - Prevent an empty desktop path.
-      + https://github.com/lxqt/pcmanfm-qt/pull/1601
-      + https://github.com/lxqt/pcmanfm-qt/commit/f1438b
-    - Allow customizing workspace margins on desktop.
-      + https://github.com/lxqt/pcmanfm-qt/pull/1606
-      + https://github.com/lxqt/pcmanfm-qt/commit/1151f4
+  * Removed redundant "Repository-Browse" field from debian/upstream/metadata.
+  * Upstreamed compatible Ubuntu changes, modifying the following files:
+    - control
+    - copyright
+    - lintian-overrides
+    - rules
+    - upstream/signing-key.asc
+    - patches directory
 
- -- Simon Quigley <tsimonq2@ubuntu.com>  Wed, 22 Jun 2022 00:03:18 -0500
+ -- Aaron Rainbolt <arraybolt3@gmail.com>  Fri, 15 Jul 2022 04:57:59 -0500
 
-pcmanfm-qt (1.1.0-0ubuntu3) kinetic; urgency=medium
+pcmanfm-qt (1.1.0-1) experimental; urgency=medium
 
-  * Create a new patch from thin air (woah, shiny!) which adds the Lubuntu
-    Manual as an optional desktop shortcut. Spread the good work Lyn has been
-    doing for a few years now. :)
+  * New upstream version 1.0.0
+  * Add debian/salsa-ci.yml file.
+  * Update debian/upstream/signing-key.asc.
+  * New upstream version 1.1.0
+  * Build-deps on lxqt-build-tools (>= 1.1.0~).
+  * Build-deps on libfm-qt-dev (>= 1.1.0~).
+  * Depends on libfm-qt11 (>= 1.1.0~).
+  * Drop obsoleted lxqt-common and pcmanfm-qt from Breaks and Replaces.
 
- -- Simon Quigley <tsimonq2@ubuntu.com>  Thu, 16 Jun 2022 23:06:52 -0400
-
-pcmanfm-qt (1.1.0-0ubuntu2) kinetic; urgency=medium
-
-  * Cherry-pick upstream commit fixing some scaling oddities:
-    - https://github.com/lxqt/pcmanfm-qt/commit/c84434
-    - https://github.com/lxqt/pcmanfm-qt/issues/1595
-
- -- Simon Quigley <tsimonq2@ubuntu.com>  Wed, 08 Jun 2022 19:05:41 -0500
-
-pcmanfm-qt (1.1.0-0ubuntu1) kinetic; urgency=medium
-
-  * New upstream release.
-  * Update build dependencies and remove some old Breaks/Replaces.
-
- -- Simon Quigley <tsimonq2@ubuntu.com>  Thu, 02 Jun 2022 09:35:43 -0500
-
-pcmanfm-qt (0.17.0-0ubuntu1) impish; urgency=medium
-
-  * New upstream release 0.17.0
-  * Update debian/control
-    - Use libfm-qt 0.17.1
-    - Use lxqt-build-tools 0.9.0
-    - Bump Standards-Version to 4.5.1
-    - Readd ${misc:Depends} and ${shlibs:Depends}
-    - Extend description of pcmanfm-qt-l10n
-  * Update debian/copyright
-
- -- apt-ghetto <apt-ghetto@protonmail.com>  Tue, 10 Aug 2021 15:28:47 +0200
-
-pcmanfm-qt (0.16.0-1ubuntu2) hirsute; urgency=low
-
-  [ Raman Sarda ]
-  * New upstream version.
-  * Bump debhelper-compat requirement to 13.
-  * Drop empty series file.
-  * Update dependencies.
-
- -- Raman Sarda <theloudspeaker@disroot.org>  Mon, 22 Feb 2021 01:37:46 +0530
+ -- Andrew Lee (李健秋) <ajqlee@debian.org>  Wed, 13 Jul 2022 03:37:37 +0800
 
 pcmanfm-qt (0.16.0-1) unstable; urgency=medium
 
@@ -74,17 +42,6 @@ pcmanfm-qt (0.16.0-1) unstable; urgency=medium
   * New upstream release. (Closes: #978174)
 
  -- Andrew Lee (李健秋) <ajqlee@debian.org>  Thu, 07 Jan 2021 17:33:42 +0800
-
-pcmanfm-qt (0.15.0-0ubuntu1) groovy; urgency=medium
-
-  * New upstream release.
-    - Update upstream signing key.
-    - Update LXQt build dependencies.
-    - libfm-qt6 -> libfm-qt7 due to SONAME bump.
-  * Update Standards-version to 4.5.0, no changes needed.
-  * Migrate to debhelper-compat.
-
- -- Simon Quigley <tsimonq2@ubuntu.com>  Thu, 04 Jun 2020 14:18:48 -0500
 
 pcmanfm-qt (0.14.1-3) unstable; urgency=medium
 
@@ -110,25 +67,6 @@ pcmanfm-qt (0.14.1-1) unstable; urgency=medium
 
  -- Alf Gaida <agaida@siduction.org>  Sun, 24 Feb 2019 23:23:24 +0100
 
-pcmanfm-qt (0.14.1-0ubuntu3) eoan; urgency=medium
-
-  * Drop patch change-thumbnail-view-icon.patch
-
- -- apt-ghetto <apt-ghetto@lubuntu.me>  Sun, 29 Sep 2019 11:19:46 +0200
-
-pcmanfm-qt (0.14.1-0ubuntu2) eoan; urgency=medium
-
-  * Changed thumbnail view icon to view-preview
-
- -- Hans P Möller <hmollercl@lubuntu.me>  Sat, 07 Sep 2019 12:34:58 -0400
-
-pcmanfm-qt (0.14.1-0ubuntu1) disco; urgency=medium
-
-  * New upstream release.
-  * Run wrap-and-sort.
-
- -- Simon Quigley <tsimonq2@ubuntu.com>  Sat, 09 Mar 2019 13:23:17 -0600
-
 pcmanfm-qt (0.14.0-1) unstable; urgency=medium
 
   * Cherry-picking upstream release 0.14.0.
@@ -144,36 +82,6 @@ pcmanfm-qt (0.14.0-1) unstable; urgency=medium
   * Added d/upstream/metadata
 
  -- Alf Gaida <agaida@siduction.org>  Sun, 27 Jan 2019 19:40:51 +0100
-
-pcmanfm-qt (0.14.0-0ubuntu2) disco; urgency=medium
-
-  * Depend on the newer libfm-qt6 package.
-
- -- Simon Quigley <tsimonq2@ubuntu.com>  Sat, 26 Jan 2019 10:21:10 -0600
-
-pcmanfm-qt (0.14.0-0ubuntu1) disco; urgency=medium
-
-  * New upstream release.
-    - Bump build dependencies.
-    - Remove reverse-applicable patches.
-  * Bump Standards-version to 4.3.0, no changes needed.
-  * Bump debhelper compat to 12, no changes needed.
-  * Add a new pcmanfm-qt-l10n package.
-
- -- Simon Quigley <tsimonq2@ubuntu.com>  Sat, 26 Jan 2019 01:01:30 -0600
-
-pcmanfm-qt (0.13.0-2ubuntu2) cosmic; urgency=medium
-
-  * No-change rebuild for changes in libfm-qt.
-
- -- Simon Quigley <tsimonq2@ubuntu.com>  Wed, 10 Oct 2018 21:00:58 -0500
-
-pcmanfm-qt (0.13.0-2ubuntu1) cosmic; urgency=medium
-
-  * Update Vcs-* and Maintainer for maintaining in Lubuntu.
-  * Polish the drag and drop experience by backporting some upstream commits.
-
- -- Simon Quigley <tsimonq2@ubuntu.com>  Sat, 14 Jul 2018 18:24:46 -0500
 
 pcmanfm-qt (0.13.0-2) unstable; urgency=medium
 
@@ -540,4 +448,3 @@ pcmanfm-qt (0.9.0+20150816-1) unstable; urgency=medium
   * Warpped lines in copyright.
 
  -- Andrew Lee (李健秋) <ajqlee@debian.org>  Mon, 17 Aug 2015 21:04:54 +0800
-
