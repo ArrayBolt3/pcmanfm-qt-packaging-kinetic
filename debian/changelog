@@ -1,7 +1,6 @@
 pcmanfm-qt (1.1.0-2ubuntu1) kinetic; urgency=medium
 
   * Added Lubuntu Manual patch.
-  * Removed salsa-ci.yml.
 
  -- Aaron Rainbolt <arraybolt3@gmail.com>  Fri, 15 Jul 2022 16:12:33 -0500
 
